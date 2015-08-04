@@ -1,5 +1,5 @@
 ############################################################
-# Dockerfile to build the Rolltime MongoDB support.
+# Dockerfile to build the HDX Monitor MongoDB support.
 ############################################################
 
 FROM mongo:latest
