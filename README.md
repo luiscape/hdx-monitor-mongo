@@ -9,5 +9,5 @@ docker run -v "$(pwd)":/data --name mongo \
   -e MONGODB_USER_NAME=foo \
   -e MONGODB_USER_PASSWORD=bar \
   -e MONGODB_DATABASE=baz \
-  -d luiscape/hdx-monitor-mongo mongod --smallfiles
+  -d luiscape/hdx-monitor-mongo:latest
 ```
