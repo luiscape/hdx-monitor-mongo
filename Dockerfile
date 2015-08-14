@@ -6,8 +6,4 @@ FROM mongo:latest
 
 MAINTAINER Luis Capelo <capelo@un.org>
 
-# Download latest configuration script.
-RUN \
-  curl https://raw.githubusercontent.com/rolltime/rolltime-mongo/master/bin/configure.sh > configure.sh
-
 CMD ["mongod", "--smallfiles"]
