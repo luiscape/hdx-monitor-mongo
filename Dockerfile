@@ -4,9 +4,13 @@
 
 FROM mongo:latest
 
-MAINTAINER Luis Capelo <luiscape@gmail.com>
+MAINTAINER Luis Capelo <capelo@un.org>
 
 # Download latest configuration script.
-RUN curl https://raw.githubusercontent.com/rolltime/rolltime-mongo/master/bin/configure.sh > configure.sh
+RUN \
+  curl https://raw.githubusercontent.com/rolltime/rolltime-mongo/master/bin/configure.sh > configure.sh
 
-CMD ["mongod", "--smallfiles"]
+RUN \
+ sudo service mongo start
+
+CMD ["bash", "configure.sh"]
